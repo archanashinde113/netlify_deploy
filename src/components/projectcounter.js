@@ -37,7 +37,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchCounters = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/projects/counter');
+        const response = await axios.get('https://netlify-backend-2.onrender.com/api/projects/counter');
         setCounters(response.data);
       } catch (error) {
         console.error('Error fetching counters', error);
@@ -46,7 +46,7 @@ const Dashboard = () => {
 
     const fetchRunningDelayed = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/projects/counter/delay');
+        const response = await axios.get('https://netlify-backend-2.onrender.com/api/projects/counter/delay');
         setRunningDelayed(response.data.running_delayed_projects);
       } catch (error) {
         console.error('Error fetching running delayed projects', error);
@@ -55,7 +55,7 @@ const Dashboard = () => {
 
     const projetChart = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/projects/chartdata');
+        const response = await axios.get('https://netlify-backend-2.onrender.com/api/projects/chartdata');
         setChartData(response.data);
       } catch (err) {
         console.error(err);

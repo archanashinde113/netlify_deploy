@@ -33,7 +33,7 @@ const ProjectList = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/projects');
+        const response = await axios.get('https://netlify-backend-2.onrender.com/api/projects');
         setProjects(response.data);
       } catch (err) {
         setError('Failed to fetch projects');
@@ -51,7 +51,7 @@ const ProjectList = () => {
 
   const handleStartClick = async (id) => {
     try {
-      const response = await axios.put(`http://localhost:5000/api/projects/status`, { id, status: 'Running' });
+      const response = await axios.put(`https://netlify-backend-2.onrender.com/api/projects/status`, { id, status: 'Running' });
       const updatedProject = response.data;
 
       setProjects(prevProjects =>
@@ -66,7 +66,7 @@ const ProjectList = () => {
 
   const closeClick = async (id) => {
     try {
-      const response = await axios.put(`http://localhost:5000/api/projects/status`, { id, status: 'Close' });
+      const response = await axios.put(`https://netlify-backend-2.onrender.com/api/projects/status`, { id, status: 'Close' });
       const updatedProject = response.data;
       setProjects(prevProjects =>
         prevProjects.map(project =>
@@ -80,7 +80,7 @@ const ProjectList = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.put(`http://localhost:5000/api/projects/status`, { id, status: 'Cancel' });
+      const response = await axios.put(`https://netlify-backend-2.onrender.com/api/projects/status`, { id, status: 'Cancel' });
       const updatedProject = response.data;
       setProjects(prevProjects =>
         prevProjects.map(project =>

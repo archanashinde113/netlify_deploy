@@ -71,7 +71,7 @@ const AddProject = () => {
         Status: 'default',
       };
 
-      await axios.post('http://localhost:5000/api/projects', projectData);
+      await axios.post('https://netlify-backend-2.onrender.com/api/projects', projectData);
       // Handle successful submission (e.g., redirect or show success message)
       console.log("added project successfully");
       navigate('/projectlist');
