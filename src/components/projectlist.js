@@ -191,7 +191,7 @@ const ProjectList = () => {
                       <button className="btn btnc btn-sm my-1 custom-btn" onClick={() => handleDelete(project._id)}>Cancel</button>
                     )}
                   </div>
-                  <hr />
+                  
                 </div>
               ))}
             </div>

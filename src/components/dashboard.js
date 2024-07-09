@@ -17,15 +17,15 @@ import logout from './image/Logout.svg';
 
 const AddProject = () => {
   const [projectName, setProjectName] = useState('');
-  const [Reason, setReason] = useState('');
-  const [Type, setType] = useState('');
+  const [Reason, setReason] = useState('For Business');
+  const [Type, setType] = useState('Internal');
   const [Division, setDivision] = useState('');
-  const [Category, setCategory] = useState('');
-  const [Priority, setPriority] = useState('');
-  const [Department, setDepartment] = useState('');
+  const [Category, setCategory] = useState('Quality A');
+  const [Priority, setPriority] = useState('High');
+  const [Department, setDepartment] = useState('Statergy');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
-  const [Location, setLocation] = useState('');
+  const [Location, setLocation] = useState('Pune');
   const [error, setError] = useState('');
 
   const projectlistclick = () => {
