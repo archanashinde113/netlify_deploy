@@ -203,7 +203,7 @@ const Dashboard = () => {
         <Card className='p-3 count_card_style'>Closed<br /> <span className="text-bold">{counters.closed_projects}</span></Card>
         <Card className='p-3 count_card_style'>Running<br /> <span className="text-bold">{counters.running_projects}</span></Card>
         <Card className='p-3 count_card_style'>Closure Delay<br />  <span className="text-bold">
-        {counters.running_delayed_projects}</span></Card>
+        {runningDelayed.running_delayed_projects}</span></Card>
         <Card className='p-3 count_card_style'>Cancelled<br /> <span className="text-bold">{counters.cancelled_projects}</span></Card>
       </div>
 
