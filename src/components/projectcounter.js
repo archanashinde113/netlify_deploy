@@ -18,7 +18,7 @@ accessibility(Highcharts);
 const Dashboard = () => {
   const [chartData, setChartData] = useState([]);
   const [counters, setCounters] = useState({});
-  const [runningDelayed, setRunningDelayed] = useState('0');
+  const [runningDelayed, setRunningDelayed] = useState({});
   const navigate = useNavigate();
 
   const counterNavigate = ()=>{
