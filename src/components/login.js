@@ -46,8 +46,8 @@ const Login = () => {
     } catch (err) {
       if (err.response) {
         // The request was made and the server responded with a status code
-        setError(err.response.data.message);
-        console.error('Invalid credentials:', err.response.data.message);
+        setError('Invalid credentials');
+        console.error('Invalid credentials', err.response.data.message);
       } else if (err.request) {
         // The request was made but no response was received
         setError('No response received from server');
@@ -84,7 +84,6 @@ const Login = () => {
             <div className='mt-4'>
               <label>Password</label>
               <input
-                type="password"
                 className='form-control'
                 placeholder="Password"
                 value={password}

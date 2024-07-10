@@ -47,7 +47,7 @@ const Dashboard = () => {
     const fetchRunningDelayed = async () => {
       try {
         const response = await axios.get('https://netlify-backend-2.onrender.com/api/projects/counter/delay');
-        setRunningDelayed(response.data.running_delayed_projects);
+        setRunningDelayed(response.data);
       } catch (error) {
         console.error('Error fetching running delayed projects', error);
       }
