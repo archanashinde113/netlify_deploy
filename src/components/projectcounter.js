@@ -18,19 +18,19 @@ accessibility(Highcharts);
 const Dashboard = () => {
   const [chartData, setChartData] = useState([]);
   const [counters, setCounters] = useState({});
-  const [runningDelayed, setRunningDelayed] = useState({});
+  const [runningDelayedProjects, setRunningDelayed] = useState([]);
   const navigate = useNavigate();
 
-  const counterNavigate = ()=>{
+  const counterNavigate = () => {
     navigate('/dashboard');
   }
-  const counterNavigate2 = ()=>{
+  const counterNavigate2 = () => {
     navigate('/projectlist');
   }
 
   const handleLogout = () => {
-    localStorage.removeItem('token'); // Remove token from local storage
-    navigate('/'); // Redirect to login page
+    localStorage.removeItem('token');
+    navigate('/');
   };
 
 
@@ -47,7 +47,8 @@ const Dashboard = () => {
     const fetchRunningDelayed = async () => {
       try {
         const response = await axios.get('https://netlify-backend-2.onrender.com/api/projects/counter/delay');
-        setRunningDelayed(response.data);
+        setRunningDelayed(response.data.running_delayed_projects);
+        console.log(response.data.running_delayed_projects);
       } catch (error) {
         console.error('Error fetching running delayed projects', error);
       }
@@ -78,9 +79,7 @@ const Dashboard = () => {
       categories: chartData.map(d => d.department),
       crosshair: true,
       labels: {
-        //rotation: -45, // Rotate labels for better readability
-        formatter: function() {
-          // Find corresponding success percentage for the current category
+        formatter: function () {
           const department = this.value;
           const departmentData = chartData.find(d => d.department === department);
           if (departmentData) {
@@ -95,10 +94,10 @@ const Dashboard = () => {
         title: {
           text: ''
         },
-        min:0,
+        min: 0,
         tickInterval: 5,
         labels: {
-          format: '{value}' // Display format for yAxis labels
+          format: '{value}'
         }
       },
       {
@@ -108,7 +107,7 @@ const Dashboard = () => {
         opposite: false
       }
     ],
-    
+
     plotOptions: {
       column: {
         dataLabels: {
@@ -129,7 +128,7 @@ const Dashboard = () => {
         tooltip: {
           valueSuffix: ' '
         },
-        color: '#7cb5ec' // Blue color for total projects
+        color: '#7cb5ec'
       },
       {
         name: 'Closed Projects',
@@ -138,35 +137,40 @@ const Dashboard = () => {
         tooltip: {
           valueSuffix: ' '
         },
-        color: '#93c572' // Gray color for closed projects
+        color: '#93c572'
       },
-      // {
-      //   name: 'Total/Closed Projects Ratio',
-      //   type: 'line',
-      //   yAxis: 1,
-      //   data: chartData.map(data => (data.totalProjects !== 0 ? data.closedProjects / data.totalProjects : 0)),
-      //   tooltip: {
-      //     valueSuffix: ' Ratio'
-      //   },
-      //   color: '#90ed7d' // Green color for ratio line
-      // },
-      
+
+
       {
-        name: 'Success Percentage',
+        name: '',
         type: 'line',
-       
+
         data: chartData.map(data => data.successPercentage),
         tooltip: {
           valueSuffix: ' %'
         },
-       
-        color: '#f7a35c', // Orange color for success percentage line
-        dashStyle: 'shortdot', // Dotted line style for percentage
-        lineWidth: 0, // Make the line invisible
-       
+
+        color: '#f7a35c',
+        dashStyle: 'shortdot',
+        lineWidth: 0,
+        marker: {
+          enabled: false,
+          states: {
+            hover: {
+              enabled: false,
+            }
+          }
+        },
+        states: {
+        hover: {
+            enabled: false,
+            lineWidthPlus: 0
+        }
+    }
+
       },
 
-      
+
     ],
     tooltip: {
       shared: true
@@ -177,7 +181,7 @@ const Dashboard = () => {
       borderWidth: 0
     },
     accessibility: {
-      enabled: true // Enable accessibility module
+      enabled: true
     }
   };
 
@@ -187,32 +191,31 @@ const Dashboard = () => {
         <div className='col-md-1'>
           <div className="img-proj">
             <img src={Dashboardimg} alt="Dashboardimg" style={{ cursor: 'pointer' }} className="img-proj1" />
-            <img src={projectlist} alt="projectlist" className="img-proj1" style={{ cursor: 'pointer' }} onClick={counterNavigate2}/>
-            <img src={createprojectactive} alt="createproject" className="img-proj1" style={{ cursor: 'pointer' }} onClick={counterNavigate}/>
+            <img src={projectlist} alt="projectlist" className="img-proj1" style={{ cursor: 'pointer' }} onClick={counterNavigate2} />
+            <img src={createprojectactive} alt="createproject" className="img-proj1" style={{ cursor: 'pointer' }} onClick={counterNavigate} />
             <img src={logout} alt="logout" className="img-proj1" style={{ cursor: 'pointer' }} onClick={handleLogout} />
           </div>
         </div>
 
         <div className='col-md-11 headerbg'>
-        <div className='logoimg1'>
-        <h6 className='text-white left-text'>Dashboard</h6>
-        <img src={logo} alt="logo" className='center-image my-3' />
-      </div>
-      <div className='counter_card'>
-        <Card className='p-3 count_card_style'>Total Projects<br /> <span className="text-bold">{counters.total_projects}</span></Card>
-        <Card className='p-3 count_card_style'>Closed<br /> <span className="text-bold">{counters.closed_projects}</span></Card>
-        <Card className='p-3 count_card_style'>Running<br /> <span className="text-bold">{counters.running_projects}</span></Card>
-        <Card className='p-3 count_card_style'>Closure Delay<br />  <span className="text-bold">
-        {runningDelayed.running_delayed_projects}</span></Card>
-        <Card className='p-3 count_card_style'>Cancelled<br /> <span className="text-bold">{counters.cancelled_projects}</span></Card>
-      </div>
+          <div className='logoimg1'>
+            <h6 className='text-white left-text'>Dashboard</h6>
+            <img src={logo} alt="logo" className='center-image my-3' />
+          </div>
+          <div className='counter_card'>
+            <Card className='p-3 count_card_style'>Total Projects<br /> <span className="text-bold">{counters.total_projects}</span></Card>
+            <Card className='p-3 count_card_style'>Closed<br /> <span className="text-bold">{counters.closed_projects}</span></Card>
+            <Card className='p-3 count_card_style'>Running<br /> <span className="text-bold">{counters.running_projects}</span></Card>
+            <Card className='p-3 count_card_style'>Closure Delay<br />  <span className="text-bold">{runningDelayedProjects}</span></Card>
+            <Card className='p-3 count_card_style'>Cancelled<br /> <span className="text-bold">{counters.cancelled_projects}</span></Card>
+          </div>
 
-      <div class="mt-2">
-        <HighchartsReact highcharts={Highcharts} options={options} />
-      </div>
+          <div class="mt-2">
+            <HighchartsReact highcharts={Highcharts} options={options} />
+          </div>
         </div>
       </div>
-      
+
 
     </div>
   );

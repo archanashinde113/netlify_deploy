@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import logo from './image/Logo.svg';
 import Card from '@mui/material/Card';
-//import CardContent from '@mui/material/CardContent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CSS/style.css';
 import { useNavigate } from 'react-router-dom';
@@ -34,26 +33,26 @@ const Login = () => {
         password
       });
 
-      // Assuming backend returns a token upon successful login
+    
       const { token } = response.data;
       localStorage.setItem('token', token);
 
 
-      // Redirect or update state to indicate successful login
+      
       setError('');
       console.log('Login successful');
       navigate('/projectcounter');
     } catch (err) {
       if (err.response) {
-        // The request was made and the server responded with a status code
-        setError('Invalid credentials');
-        console.error('Invalid credentials', err.response.data.message);
+       
+        setError(err.response.data.message);
+        setError('Invalid credentials', err.response.data.message);
       } else if (err.request) {
-        // The request was made but no response was received
+        
         setError('No response received from server');
         console.error('No response received from server');
       } else {
-        // Something happened in setting up the request that triggered an Error
+      
         setError('Error in request setup');
         console.error('Error in request setup:', err.message);
       }
@@ -61,6 +60,7 @@ const Login = () => {
   };
 
   return (
+    
     <div className='container bglogin'>
       <div className='logoimg'>
         <img src={logo} alt="logo" className='mt-4' />
@@ -84,6 +84,7 @@ const Login = () => {
             <div className='mt-4'>
               <label>Password</label>
               <input
+                type="password"
                 className='form-control'
                 placeholder="Password"
                 value={password}

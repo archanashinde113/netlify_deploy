@@ -14,7 +14,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
 const ProjectList = () => {
-  const navigate = useNavigate(); // useNavigate should be declared at the top level
+  const navigate = useNavigate(); 
 
   const createprojectclick = () => {
     navigate('/dashboard');
@@ -45,8 +45,8 @@ const ProjectList = () => {
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem('token'); // Remove token from local storage
-    navigate('/'); // Redirect to login page
+    localStorage.removeItem('token'); 
+    navigate('/'); 
   };
 
   const handleStartClick = async (id) => {
@@ -251,8 +251,8 @@ const ProjectList = () => {
 
               {Array.from({ length: totalPages }, (_, index) => {
                 if (
-                  index < 4 || // Display first 4 page numbers
-                  (index === totalPages - 1) // Display the last page number
+                  index < 4 || 
+                  (index === totalPages - 1)
                 ) {
                   return (
                     <button
@@ -286,10 +286,6 @@ const ProjectList = () => {
                 Next &raquo;
               </button>
             </div>
-
-
-
-
           </Card>
         </div>
       </div>

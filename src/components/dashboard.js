@@ -6,8 +6,6 @@ import projectlist from './image/Project-list.svg';
 import createprojectactive from './image/create-project-active.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CSS/style.css';
-// import DatePicker from 'react-datepicker';
-// import 'react-datepicker/dist/react-datepicker.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -32,8 +30,8 @@ const AddProject = () => {
     navigate('/projectlist')
   }
   const handleLogout = () => {
-    localStorage.removeItem('token'); // Remove token from local storage
-    navigate('/'); // Redirect to login page
+    localStorage.removeItem('token'); 
+    navigate('/');
   };
 
   const projectcounterclick = () => {
@@ -72,7 +70,6 @@ const AddProject = () => {
       };
 
       await axios.post('https://netlify-backend-2.onrender.com/api/projects', projectData);
-      // Handle successful submission (e.g., redirect or show success message)
       console.log("added project successfully");
       navigate('/projectlist');
     } catch (err) {
@@ -218,7 +215,6 @@ const AddProject = () => {
                     type="date"
                     selected={startDate}
                     onChange={(e) => setStartDate(e.target.value)}
-                    //onChange={(date) => setStartDate(date)}
                     dateformat="yyyy/mm/dd"
                     className="form-control"
                     id="startDate"
@@ -231,7 +227,6 @@ const AddProject = () => {
                     type="date"
                     selected={endDate}
                     onChange={(e) => setEndDate(e.target.value)}
-                    //onChange={(date) => setEndDate(date)}
                     dateformat="yyyy/mm/dd"
                     className="form-control"
                     id="endDate"

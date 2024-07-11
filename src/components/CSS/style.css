@@ -1,8 +1,8 @@
 @media (min-width: 768px) {
     .img-proj {
       display: flex;
-      align-items: center; /* Centers items vertically */
-      justify-content: center; /* Centers items horizontally */
+      align-items: center;
+      justify-content: center;
       flex-direction: column;
       height: 100vh; 
     }
@@ -19,29 +19,19 @@
 }
 
 .bglogin {
-    height: 67vh;
+    height: 60vh;
     background-image: url('../image/login-bg-1.svg');
-    /* Relative path from CSS file */
     background-size: cover;
-    /* Ensure the image covers the container */
     background-position: center;
-    /* Center the background image */
     background-repeat: no-repeat;
-    /* Prevent the background image from repeating */
-
 }
 
 .headerbg {
     height:  19vh;
     background-image: url('../image/Header-bg.svg');
-    /* Relative path from CSS file */
     background-size: cover;
-    /* Ensure the image covers the container */
     background-position: center;
-    /* Center the background image */
     background-repeat: no-repeat;
-    /* Prevent the background image from repeating */
-    
 }
 
 
@@ -54,24 +44,18 @@
 
 .error-message {
     color: red;
-    /* Set text color to red */
     text-align: center;
-    /* Center the text horizontally */
     margin-top: 10px;
-    /* Optional: Add some space above the message */
 }
 
 .dashbg {
     padding: 2vh;
     box-shadow: 0 4px 8px rgba(128, 128, 128, 0.5);
-    /* Add a subtle grey shadow */
 }
 
 .left-text {
     margin-right: auto;
-    /* Push the text to the left */
     text-align: left;
-    /* Align text to the left */
 }
 
 .center-image {
@@ -82,7 +66,6 @@
     
     display: flex;
     align-items: center;
-    /* Center items vertically */
 }
 
 .logcol {
@@ -93,18 +76,18 @@
 .counter_card {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Adjust spacing between cards */
+    gap: 10px; 
 }
 
 .counter_card .count_card_style {
-    flex: 1 1 100px; /* Example size; adjust as needed */
-    min-width: 150px; /* Minimum width to prevent cards from shrinking too much */
-    max-width: 300px; /* Maximum width to ensure cards do not grow too wide */
+    flex: 1 1 100px; 
+    min-width: 150px; 
+    max-width: 300px; 
   }
   
   @media (max-width: 768px) {
     .counter_card {
-      flex-direction: column; /* Stack cards vertically on smaller screens */
+      flex-direction: column; 
     }
   }
 
@@ -202,9 +185,9 @@ input[type="text"] {
     margin-bottom: 5px;
   }
 
-  /* hr {
+  hr {
     margin: 10px 0;
-  } */
+  }
 
   .custom-btn {
     margin-right: 5px;
@@ -232,5 +215,23 @@ input[type="text"] {
 .pagination span {
   margin: 0 5px;
 }
+
+
+
+
+/* .password-container {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px; 
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+} */
 
 
