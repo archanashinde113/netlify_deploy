@@ -75,6 +75,7 @@ const Login = () => {
               <input
                 type="email"
                 id="email"
+                autocomplete="email"
                 className="form-control"
                 placeholder="Email"
                 value={email}
@@ -88,6 +89,7 @@ const Login = () => {
               <input
                 type="password"
                 id="password"
+                autocomplete="password"
                 className='form-control'
                 placeholder="Password"
                 value={password}
