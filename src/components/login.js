@@ -71,26 +71,30 @@ const Login = () => {
           <Card sx={{ minWidth: 275 }} className='logincard'>
             <p className='text-center mb-4'>Login to get started</p>
             <div>
-              <label>Email</label>
+              <label>Email
               <input
                 type="email"
+                id="email"
                 className="form-control"
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
+              </label>
             </div>
             <div className='mt-4'>
-              <label>Password</label>
+              <label>Password
               <input
                 type="password"
+                id="password"
                 className='form-control'
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
+              </label>
             </div>
             <button type="submit" className='btn btn-primary mt-5'>Login</button>
           </Card>
