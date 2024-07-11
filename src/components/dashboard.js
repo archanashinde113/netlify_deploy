@@ -116,7 +116,8 @@ const AddProject = () => {
 
               <div className="row">
                 <div className="col-md-4 mb-3">
-                  <label htmlFor="Reason" className="form-label">Reason</label>
+                  
+                  <label htmlFor="Reason" className="form-label">Reason
                   <select
                     className="form-select"
                     id="Reason"
@@ -127,9 +128,10 @@ const AddProject = () => {
                     <option value="For Business">For Business</option>
                     <option value="For Marketing">For Marketing</option>
                   </select>
+                  </label>
                 </div>
                 <div className="col-md-4 mb-3">
-                  <label htmlFor="Type" className="form-label">Type</label>
+                  <label htmlFor="Type" className="form-label">Type
                   <select
                     className="form-select"
                     id="Type"
@@ -140,9 +142,10 @@ const AddProject = () => {
                     <option value="Internal">Internal</option>
                     <option value="External">External</option>
                   </select>
+                  </label>
                 </div>
                 <div className="col-md-4 mb-3">
-                  <label htmlFor="Division" className="form-label">Division</label>
+                  <label htmlFor="Division" className="form-label">Division
                   <select
                     className="form-select"
                     id="Division"
@@ -156,12 +159,13 @@ const AddProject = () => {
                     <option value="Non-IT">Non-IT</option>
                     <option value="Finance">Finance</option>
                   </select>
+                  </label>
                 </div>
               </div>
 
               <div className="row">
                 <div className="col-md-4 mb-3">
-                  <label htmlFor="Category" className="form-label">Category</label>
+                  <label htmlFor="Category" className="form-label">Category
                   <select
                     className="form-select"
                     id="Category"
@@ -174,9 +178,10 @@ const AddProject = () => {
                     <option value="FrontEnd">FrontEnd</option>
                     <option value="BackEnd">BackEnd</option>
                   </select>
+                  </label>
                 </div>
                 <div className="col-md-4 mb-3">
-                  <label htmlFor="Priority" className="form-label">Priority</label>
+                  <label htmlFor="Priority" className="form-label">Priority
                   <select
                     className="form-select"
                     id="Priority"
@@ -188,9 +193,10 @@ const AddProject = () => {
                     <option value="Medium">Medium</option>
                     <option value="Low">Low</option>
                   </select>
+                  </label>
                 </div>
                 <div className="col-md-4 mb-3">
-                  <label htmlFor="Department" className="form-label">Department</label>
+                  <label htmlFor="Department" className="form-label">Department
                   <select
                     className="form-select"
                     id="Department"
@@ -205,12 +211,13 @@ const AddProject = () => {
                     <option value="Non-IT">Non-IT</option>
                     <option value="HR">HR</option>
                   </select>
+                  </label>
                 </div>
               </div>
 
               <div className="row">
                 <div className="col-md-4 mb-3">
-                  <label htmlFor="startDate" className="form-label">Start Date as per project plan</label>
+                  <label htmlFor="startDate" className="form-label">Start Date as per project plan
                   <input
                     type="date"
                     selected={startDate}
@@ -220,9 +227,10 @@ const AddProject = () => {
                     id="startDate"
                     required
                   />
+                  </label>
                 </div>
                 <div className="col-md-4 mb-3">
-                  <label htmlFor="endDate" className="form-label">End Date as per project plan</label>
+                  <label htmlFor="endDate" className="form-label">End Date as per project plan
                   <input
                     type="date"
                     selected={endDate}
@@ -232,9 +240,10 @@ const AddProject = () => {
                     id="endDate"
                     required
                   />
+                  </label>
                 </div>
                 <div className="col-md-4 mb-3">
-                  <label htmlFor="Location" className="form-label">Location</label>
+                  <label htmlFor="Location" className="form-label">Location
                   <select
                     className="form-select"
                     id="Location"
@@ -247,6 +256,7 @@ const AddProject = () => {
                     <option value="Mumbai">Mumbai</option>
                     <option value="Delhi">Delhi</option>
                   </select>
+                  </label>
                   <h6 className='mt-4'>Status: <b>Registered</b></h6>
                 </div>
               </div>
