@@ -116,7 +116,7 @@ const AddProject = () => {
 
               <div className="row">
                 <div className="col-md-4 mb-3">
-                  <label htmlFor="Type" className="form-label">Reason</label>
+                  <label htmlFor="Reason" className="form-label">Reason</label>
                   <select
                     className="form-select"
                     id="Reason"
@@ -129,10 +129,10 @@ const AddProject = () => {
                   </select>
                 </div>
                 <div className="col-md-4 mb-3">
-                  <label htmlFor="Priority" className="form-label">Type</label>
+                  <label htmlFor="Type" className="form-label">Type</label>
                   <select
                     className="form-select"
-                    id="teamSize"
+                    id="Type"
                     value={Type}
                     onChange={(e) => setType(e.target.value)}
                     required
@@ -234,10 +234,10 @@ const AddProject = () => {
                   />
                 </div>
                 <div className="col-md-4 mb-3">
-                  <label htmlFor="teamSize" className="form-label">Location</label>
+                  <label htmlFor="Location" className="form-label">Location</label>
                   <select
                     className="form-select"
-                    id="teamSize"
+                    id="Location"
                     value={Location}
                     onChange={(e) => setLocation(e.target.value)}
                     required
