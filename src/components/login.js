@@ -71,7 +71,7 @@ const Login = () => {
           <Card sx={{ minWidth: 275 }} className='logincard'>
             <p className='text-center mb-4'>Login to get started</p>
             <div>
-              <label>Email
+              <label htmlFor='email'>Email
               <input
                 type="email"
                 id="email"
@@ -85,7 +85,7 @@ const Login = () => {
               </label>
             </div>
             <div className='mt-4'>
-              <label>Password
+              <label htmlFor='password'>Password
               <input
                 type="password"
                 id="password"
