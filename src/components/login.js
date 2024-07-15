@@ -85,12 +85,12 @@ const Login = () => {
               </label>
             </div>
             <div className='mt-4'>
-              <label htmlFor='password'>Password
+              <label htmlFor='password form-control'>Password
               <input
                 type="password"
                 id="password"
                 autocomplete="password"
-                className='form-control'
+               className="form-control"
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}

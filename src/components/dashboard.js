@@ -13,6 +13,7 @@ import Card from '@mui/material/Card';
 import logout from './image/Logout.svg';
 
 
+
 const AddProject = () => {
   const [projectName, setProjectName] = useState('');
   const [Reason, setReason] = useState('For Business');
@@ -120,7 +121,7 @@ const AddProject = () => {
 
                   <label htmlFor="Reason" className="form-label">Reason
                     <select
-                      className="form-select"
+                      className="form-select form-control"
                       id="Reason"
                       value={Reason}
                       onChange={(e) => setReason(e.target.value)}

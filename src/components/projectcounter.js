@@ -11,8 +11,10 @@ import createprojectactive from './image/create-project.svg';
 import logo from './image/Logo.svg';
 import { useNavigate } from 'react-router-dom';
 import logout from './image/Logout.svg';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+ 
 
 accessibility(Highcharts);
 const Dashboard = () => {
@@ -184,6 +186,44 @@ const Dashboard = () => {
     }
   };
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+
+    appendDots: dots => (
+        <div>
+            <ul style={{
+                margin: "0px", padding: "0px"
+            }}> {dots} </ul>
+        </div>
+    ),
+
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3.5,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2.5,
+                slidesToScroll: 1,
+                initialSlide: 1
+            }
+        }
+    ]
+};
+
+  
+  
   return (
     <div className="container">
       <div className='row'>
@@ -201,17 +241,40 @@ const Dashboard = () => {
             <h6 className='text-white left-text'>Dashboard</h6>
             <img src={logo} alt="logo" className='center-image my-3' />
           </div>
-          <div className='counter_card'>
+         
+          <div className="full-width-carousel">
+                <Slider {...settings}>
+                    <div className="full-width-slide slide">
+                    <Card className='p-3 count_card_style slide-image'>Total Projects<br /> <span className="text-bold">{counters.total_projects}</span></Card>
+                    </div>
+                    <div className="full-width-slide slide">
+                    <Card className='p-3 count_card_style slide-image'>Closed<br /> <span className="text-bold">{counters.closed_projects}</span></Card>
+                    </div>
+                    <div className="full-width-slide slide">
+                    <Card className='p-3 count_card_style slide-image'>Running<br /> <span className="text-bold">{counters.running_projects}</span></Card>
+                    </div>
+                    <div className="full-width-slide slide">
+                    <Card className='p-3 count_card_style slide-image'>Closure Delay<br />  <span className="text-bold">{runningDelayedProjects}</span></Card>
+                    </div>
+                    <div className="full-width-slide slide">
+                    <Card className='p-3 count_card_style slide-image'>Cancelled<br /> <span className="text-bold">{counters.cancelled_projects}</span></Card>
+                    </div>
+                </Slider>
+            </div>
+
+          {/* <div className='counter_card'>
             <Card className='p-3 count_card_style'>Total Projects<br /> <span className="text-bold">{counters.total_projects}</span></Card>
             <Card className='p-3 count_card_style'>Closed<br /> <span className="text-bold">{counters.closed_projects}</span></Card>
             <Card className='p-3 count_card_style'>Running<br /> <span className="text-bold">{counters.running_projects}</span></Card>
             <Card className='p-3 count_card_style'>Closure Delay<br />  <span className="text-bold">{runningDelayedProjects}</span></Card>
             <Card className='p-3 count_card_style'>Cancelled<br /> <span className="text-bold">{counters.cancelled_projects}</span></Card>
-          </div>
+          </div> */}
 
           <div class="mt-2">
             <HighchartsReact highcharts={Highcharts} options={options} />
           </div>
+
+          
         </div>
       </div>
 
