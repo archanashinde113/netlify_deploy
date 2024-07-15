@@ -100,6 +100,7 @@ const AddProject = () => {
               <div className="row">
                 <div className="col-md-6 mb-3">
                   <input
+                  htmlFor="projectName"
                     type="text"
                     className="form-control"
                     placeholder='Enter Project Theme'
