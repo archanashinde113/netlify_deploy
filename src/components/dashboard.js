@@ -30,7 +30,7 @@ const AddProject = () => {
     navigate('/projectlist')
   }
   const handleLogout = () => {
-    localStorage.removeItem('token'); 
+    localStorage.removeItem('token');
     navigate('/');
   };
 
@@ -100,7 +100,7 @@ const AddProject = () => {
               <div className="row">
                 <div className="col-md-6 mb-3">
                   <input
-                  htmlFor="projectName"
+                    htmlFor="projectName"
                     type="text"
                     className="form-control"
                     placeholder='Enter Project Theme'
@@ -117,49 +117,49 @@ const AddProject = () => {
 
               <div className="row">
                 <div className="col-md-4 mb-3">
-                  
+
                   <label htmlFor="Reason" className="form-label">Reason
-                  <select
-                    className="form-select"
-                    id="Reason"
-                    value={Reason}
-                    onChange={(e) => setReason(e.target.value)}
-                    required
-                  >
-                    <option value="For Business">For Business</option>
-                    <option value="For Marketing">For Marketing</option>
-                  </select>
+                    <select
+                      className="form-select"
+                      id="Reason"
+                      value={Reason}
+                      onChange={(e) => setReason(e.target.value)}
+                      required
+                    >
+                      <option value="For Business">For Business</option>
+                      <option value="For Marketing">For Marketing</option>
+                    </select>
                   </label>
                 </div>
                 <div className="col-md-4 mb-3">
                   <label htmlFor="Type" className="form-label">Type
-                  <select
-                    className="form-select"
-                    id="Type"
-                    value={Type}
-                    onChange={(e) => setType(e.target.value)}
-                    required
-                  >
-                    <option value="Internal">Internal</option>
-                    <option value="External">External</option>
-                  </select>
+                    <select
+                      className="form-select"
+                      id="Type"
+                      value={Type}
+                      onChange={(e) => setType(e.target.value)}
+                      required
+                    >
+                      <option value="Internal">Internal</option>
+                      <option value="External">External</option>
+                    </select>
                   </label>
                 </div>
                 <div className="col-md-4 mb-3">
                   <label htmlFor="Division" className="form-label">Division
-                  <select
-                    className="form-select"
-                    id="Division"
-                    value={Division}
-                    onChange={(e) => setDivision(e.target.value)}
-                    required
-                  >
-                    <option value="Filters">Filters</option>
-                    <option value="Banking">Banking</option>
-                    <option value="IT">IT</option>
-                    <option value="Non-IT">Non-IT</option>
-                    <option value="Finance">Finance</option>
-                  </select>
+                    <select
+                      className="form-select"
+                      id="Division"
+                      value={Division}
+                      onChange={(e) => setDivision(e.target.value)}
+                      required
+                    >
+                      <option value="Filters">Filters</option>
+                      <option value="Banking">Banking</option>
+                      <option value="IT">IT</option>
+                      <option value="Non-IT">Non-IT</option>
+                      <option value="Finance">Finance</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -167,51 +167,51 @@ const AddProject = () => {
               <div className="row">
                 <div className="col-md-4 mb-3">
                   <label htmlFor="Category" className="form-label">Category
-                  <select
-                    className="form-select"
-                    id="Category"
-                    value={Category}
-                    onChange={(e) => setCategory(e.target.value)}
-                    required
-                  >
-                    <option value="Quality A">Quality A</option>
-                    <option value="Software Developer">Software Developer</option>
-                    <option value="FrontEnd">FrontEnd</option>
-                    <option value="BackEnd">BackEnd</option>
-                  </select>
+                    <select
+                      className="form-select"
+                      id="Category"
+                      value={Category}
+                      onChange={(e) => setCategory(e.target.value)}
+                      required
+                    >
+                      <option value="Quality A">Quality A</option>
+                      <option value="Software Developer">Software Developer</option>
+                      <option value="FrontEnd">FrontEnd</option>
+                      <option value="BackEnd">BackEnd</option>
+                    </select>
                   </label>
                 </div>
                 <div className="col-md-4 mb-3">
                   <label htmlFor="Priority" className="form-label">Priority
-                  <select
-                    className="form-select"
-                    id="Priority"
-                    value={Priority}
-                    onChange={(e) => setPriority(e.target.value)}
-                    required
-                  >
-                    <option value="High">High</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Low">Low</option>
-                  </select>
+                    <select
+                      className="form-select"
+                      id="Priority"
+                      value={Priority}
+                      onChange={(e) => setPriority(e.target.value)}
+                      required
+                    >
+                      <option value="High">High</option>
+                      <option value="Medium">Medium</option>
+                      <option value="Low">Low</option>
+                    </select>
                   </label>
                 </div>
                 <div className="col-md-4 mb-3">
                   <label htmlFor="Department" className="form-label">Department
-                  <select
-                    className="form-select"
-                    id="Department"
-                    value={Department}
-                    onChange={(e) => setDepartment(e.target.value)}
-                    required
-                  >
-                    <option value="">Statergy</option>
-                    <option value="Banking">Banking</option>
-                    <option value="Finance">Finance</option>
-                    <option value="Quality">Quality</option>
-                    <option value="Non-IT">Non-IT</option>
-                    <option value="HR">HR</option>
-                  </select>
+                    <select
+                      className="form-select"
+                      id="Department"
+                      value={Department}
+                      onChange={(e) => setDepartment(e.target.value)}
+                      required
+                    >
+                      <option value="">Statergy</option>
+                      <option value="Banking">Banking</option>
+                      <option value="Finance">Finance</option>
+                      <option value="Quality">Quality</option>
+                      <option value="Non-IT">Non-IT</option>
+                      <option value="HR">HR</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -219,51 +219,51 @@ const AddProject = () => {
               <div className="row">
                 <div className="col-md-4 mb-3">
                   <label htmlFor="startDate" className="form-label">Start Date as per project plan
-                  <input
-                    type="date"
-                    selected={startDate}
-                    onChange={(e) => setStartDate(e.target.value)}
-                    dateformat="yyyy/mm/dd"
-                    className="form-control"
-                    id="startDate"
-                    required
-                  />
+                    <input
+                      type="date"
+                      selected={startDate}
+                      onChange={(e) => setStartDate(e.target.value)}
+                      dateformat="yyyy/mm/dd"
+                      className="form-control"
+                      id="startDate"
+                      required
+                    />
                   </label>
                 </div>
                 <div className="col-md-4 mb-3">
                   <label htmlFor="endDate" className="form-label">End Date as per project plan
-                  <input
-                    type="date"
-                    selected={endDate}
-                    onChange={(e) => setEndDate(e.target.value)}
-                    dateformat="yyyy/mm/dd"
-                    className="form-control"
-                    id="endDate"
-                    required
-                  />
+                    <input
+                      type="date"
+                      selected={endDate}
+                      onChange={(e) => setEndDate(e.target.value)}
+                      dateformat="yyyy/mm/dd"
+                      className="form-control"
+                      id="endDate"
+                      required
+                    />
                   </label>
                 </div>
                 <div className="col-md-4 mb-3">
                   <label htmlFor="Location" className="form-label">Location
-                  <select
-                    className="form-select"
-                    id="Location"
-                    value={Location}
-                    onChange={(e) => setLocation(e.target.value)}
-                    required
-                  >
-                    <option value="Pune">Pune</option>
-                    <option value="Nashik">Nashik</option>
-                    <option value="Mumbai">Mumbai</option>
-                    <option value="Delhi">Delhi</option>
-                  </select>
+                    <select
+                      className="form-select"
+                      id="Location"
+                      value={Location}
+                      onChange={(e) => setLocation(e.target.value)}
+                      required
+                    >
+                      <option value="Pune">Pune</option>
+                      <option value="Nashik">Nashik</option>
+                      <option value="Mumbai">Mumbai</option>
+                      <option value="Delhi">Delhi</option>
+                    </select>
                   </label>
                   <h6 className='mt-4'>Status: <b>Registered</b></h6>
                 </div>
               </div>
-              </Card>
-            </div>
+            </Card>
           </div>
+        </div>
       </form >
     </div >
   );
