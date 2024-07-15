@@ -61,7 +61,7 @@ const Login = () => {
 
   return (
     
-    <div className='container-fluid bglogin'>
+    <div className='container bglogin'>
       <div className='logoimg'>
         <img src={logo} alt="logo" className='mt-4' />
       </div>
