@@ -65,7 +65,7 @@ const Login = () => {
       <div className='logoimg'>
         <img src={logo} alt="logo" className='mt-4' />
       </div>
-      <h6 className='text-center my-4 text-white'>nline Project Management</h6>
+      <h6 className='text-center my-4 text-white'>Online Project Management</h6>
       <div className="logcol">
         <form onSubmit={handleLogin}>
           <Card sx={{ minWidth: 275 }} className='logincard'>
