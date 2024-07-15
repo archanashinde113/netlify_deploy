@@ -219,7 +219,7 @@ input[type="text"] {
 
 
 
-/* .password-container {
+.password-container {
   position: relative;
 }
 
@@ -232,6 +232,9 @@ input[type="text"] {
   border: none;
   cursor: pointer;
   outline: none;
-} */
+}
 
 
+.form-control{
+  width: 100%;
+}
