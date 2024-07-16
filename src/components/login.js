@@ -76,7 +76,7 @@ const Login = () => {
                 type="email"
                 id="email"
                 autocomplete="email"
-                className="form-control"
+                className="form-control placewidth"
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -90,7 +90,7 @@ const Login = () => {
                 type="password"
                 id="password"
                 autocomplete="password"
-               className="form-control"
+               className="form-control placewidth"
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}

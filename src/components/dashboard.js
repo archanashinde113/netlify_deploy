@@ -79,7 +79,7 @@ const AddProject = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container-fluid">
 
       {error && <div className="alert alert-danger">{error}</div>}
       <form onSubmit={handleSubmit}>
@@ -121,7 +121,7 @@ const AddProject = () => {
 
                   <label htmlFor="Reason" className="form-label">Reason
                     <select
-                      className="form-select form-control"
+                      className="form-select"
                       id="Reason"
                       value={Reason}
                       onChange={(e) => setReason(e.target.value)}

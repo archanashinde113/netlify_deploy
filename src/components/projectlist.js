@@ -128,7 +128,7 @@ const ProjectList = () => {
 
   return (
 
-    <div className="container">
+    <div className="container-fluid">
       <div className='row'>
         <div className='col-md-1'>
           <div className="img-proj">

@@ -268,3 +268,15 @@ input[type="text"] {
   padding: 0 5px; /* Adjust this value to set the gap between slides */
 }
 
+.placewidth{
+  width: 100% !important;
+  min-width: 100% !important;
+  padding-right: 100px;
+}
+
+/* Ensure select element takes full width */
+.form-select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
